@@ -1,5 +1,5 @@
 # Portable-GitShell
-[Posh-Git](http://github.com/dahlbyk/posh-git "Posh-Git") and Git shell with a portable version of Git
+[Posh-Git](http://github.com/dahlbyk/posh-git) and Git shell with a portable version of Git like [PortableGit](http://github.com/msysgit/msysgit/releases) and the one contained into [Portable SmartGit](http://www.syntevo.com/smartgit/download)
 
 ### Manual start
 `GIT_ROOT_FOLDER` is the folder containing the git folder (which in turn contains the bin folder) and the `New-GitShell.ps1` script, a GitHub for Windows shell.ps1 script, modified to be used with a portable version of Git:
