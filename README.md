@@ -2,7 +2,7 @@
 [Posh-Git](http://github.com/dahlbyk/posh-git "Posh-Git") and Git shell with a portable version of Git
 
 ### Manual start
-`GIT_ROOT_FOLDER` is the folder containing the git folder (which in turn contains the bin folder) and the `New-GitShell.ps1` script
+`GIT_ROOT_FOLDER` is the folder containing the git folder (which in turn contains the bin folder) and the `New-GitShell.ps1` script, a GitHub for Windows shell.ps1 script, modified to be used with a portable version of Git:
 ```powershell
 $gitRootFolder = 'GIT_DRIVE:\GIT_ROOT_FOLDER'
 if (Test-Path $gitRootFolder)
