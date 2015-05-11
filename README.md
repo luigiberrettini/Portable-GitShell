@@ -20,3 +20,7 @@ The above code can be put in a PowerShell profile:
 `%UserProfile%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
 
 The WindowsPowerShell folder and the Microsoft.PowerShell_profile.ps1 file should be created if they do not exist.
+
+### Remember credentials on push
+Install [Windows Credential Store for Git](http://gitcredentialstore.codeplex.com):  
+`git-credential-winstore -i GIT_DRIVE:\GIT_ROOT_FOLDER\git\bin\Git.exe`
