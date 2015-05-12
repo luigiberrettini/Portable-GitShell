@@ -22,3 +22,5 @@ $env:posh_git = Resolve-Path $poshGitFolder
 . $env:posh_git\profile.example.ps1
 
 Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Action { Stop-SshAgent } | Out-Null
+
+Pop-Location
