@@ -12,7 +12,12 @@ if (Test-Path $gitRootFolder)
 ```
 
 ### Automated start via a Windows shortcut
-The above code can be put in an initialization script so that a Windows shortcut can be used to open PowerShell and enter the Git shell at the same time:  
+A Windows shortcut can be used to open PowerShell and enter the Git shell at the same time
+
+The easiest way is to run `New-GitShell.ps1` directly (set the working folder using the shortcut "Start in" folder):
+`C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "& 'GIT_DRIVE:\GIT_ROOT_FOLDER\New-GitShell.ps1'"`
+
+If a custom behavior is needed, the above code can be put in an initialization script to be run from the shortcut:  
 `C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe -noexit -command "& 'SCRIPT_DRIVE:\SCRIPT_FOLDER\Init.ps1'"`
 
 ### Automated start via a PowerShell profile
