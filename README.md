@@ -29,3 +29,13 @@ The WindowsPowerShell folder and the Microsoft.PowerShell_profile.ps1 file shoul
 ### Remember credentials on push
 Install [Windows Credential Store for Git](http://gitcredentialstore.codeplex.com):  
 `git-credential-winstore -i GIT_DRIVE:\GIT_ROOT_FOLDER\git\bin\Git.exe`
+
+Remember to set repo credentials if different from the global ones
+```bash
+# Applies to all repos
+git config --global user.name "Name Surname"
+git config --global user.email "globalEmailAddress@server"
+
+# Applies only to the repo from whose directory you launch the command
+git config user.email "RepoEmailAddress@server"
+```
