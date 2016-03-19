@@ -26,9 +26,14 @@ The above code can be put in a PowerShell profile:
 
 The WindowsPowerShell folder and the Microsoft.PowerShell_profile.ps1 file should be created if they do not exist.
 
-### Remember credentials on push
-Install [Windows Credential Store for Git](http://gitcredentialstore.codeplex.com):  
-`git-credential-winstore -i GIT_DRIVE:\GIT_ROOT_FOLDER\git\bin\Git.exe`
+### Remember credentials on push (clone is not suitable for configuration)
+Install [Git Credential Manager for Windows](http://github.com/Microsoft/Git-Credential-Manager-for-Windows) by using the [latest ZIP installer](http://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest):
+`git-credential-manager install --path GIT_DRIVE:\GIT_ROOT_FOLDER\git`
+
+Configure Git credential helper
+```bash
+git config --global credential.helper manager
+```
 
 Remember to set repo credentials if different from the global ones
 ```bash
