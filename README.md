@@ -28,7 +28,21 @@ The WindowsPowerShell folder and the Microsoft.PowerShell_profile.ps1 file shoul
 
 ### Remember credentials on push (clone is not suitable for configuration)
 Install [Git Credential Manager for Windows](http://github.com/Microsoft/Git-Credential-Manager-for-Windows) by using the [latest ZIP installer](http://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest):
-`git-credential-manager install --path GIT_DRIVE:\GIT_ROOT_FOLDER\git`
+```bash
+git-credential-manager install --path GIT_DRIVE:\GIT_ROOT_FOLDER\git
+```
+
+Add a Windows generic credential (Control Panel / Credential Manager)
+```
+Internet or network address
+git:https://github.com
+
+User name
+yourUserName
+
+Password
+yourPasswordOrPersonalAccessToken
+```
 
 Configure Git credential helper
 ```bash
