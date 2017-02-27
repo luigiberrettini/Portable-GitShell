@@ -17,9 +17,9 @@ if (!(Test-Path $poshGitFolder))
     New-Item -Path $poshGitFolder -ItemType Directory | Out-Null
     Start-Process -FilePath git -ArgumentList 'clone', 'https://github.com/dahlbyk/posh-git.git', "$poshGitFolder" -Wait -NoNewWindow
 }
-$env:posh_git = Resolve-Path $poshGitFolder
-. $env:posh_git\profile.example.ps1
+Import-Module "$poshGitFolder\src\posh-git.psm1"
 
+Start-SshAgent -Quiet
 Register-EngineEvent -SourceIdentifier ([System.Management.Automation.PsEngineEvent]::Exiting) -Action { Stop-SshAgent } | Out-Null
 
 Pop-Location
