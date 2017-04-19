@@ -6,8 +6,7 @@ $env:PLINK_PROTOCOL = "ssh"
 $env:TERM = "msys"
 $env:HOME = Resolve-Path $env:USERPROFILE
 $env:TMP = $env:TEMP = [system.io.path]::gettemppath()
-$msBuildPath = "$env:SystemRoot\Microsoft.NET\Framework\v4.0.30319"
-$env:Path = "$env:Path;$env:HOME\bin;$env:portable_git\bin;$msbuildPath"
+$env:Path = "$env:Path;$env:HOME\bin;$env:portable_git\bin"
 
 Set-Alias -Name git $env:portable_git\bin\git.exe
 
