@@ -10,6 +10,14 @@ $env:Path = "$env:Path;$env:HOME\bin;$env:portable_git\bin"
 
 Set-Alias -Name git $env:portable_git\bin\git.exe
 
+$poshSshellFolder = "$scriptPath\poshSshell"
+if (!(Test-Path $poshSshellFolder))
+{
+    New-Item -Path $poshSshellFolder -ItemType Directory | Out-Null
+    Start-Process -FilePath git -ArgumentList 'clone', 'https://github.com/dahlbyk/posh-sshell.git', "$poshSshellFolder" -Wait -NoNewWindow
+}
+Import-Module "$poshSshellFolder\posh-sshell.psm1"
+
 $poshGitFolder = "$scriptPath\poshGit"
 if (!(Test-Path $poshGitFolder))
 {
