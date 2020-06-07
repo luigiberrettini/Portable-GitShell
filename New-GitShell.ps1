@@ -29,7 +29,7 @@ if (!(Test-Path $poshGitFolder))
 Import-Module "$poshGitFolder\src\posh-git.psm1"
 
 $openSshSvcName = 'ssh-agent'
-$openSsh = Get-WmiObject Win32_Service | ? { $_.Name -eq $openSshSvcName }
+$openSsh = Get-Service | ? { $_.Name -eq $openSshSvcName }
 if ($openSsh)
 {
     if (Test-Path env:\SSH_AGENT_PID)
@@ -43,7 +43,7 @@ if ($openSsh)
     while ($openSsh.StartMode -eq 'Disabled')
     {
         Start-Process -verb runAs 'cmd' "/c sc config ""$openSshSvcName"" start= demand"
-        $openSsh = Get-WmiObject Win32_Service | ? { $_.Name -eq $openSshSvcName }
+        $openSsh = Get-Service | ? { $_.Name -eq $openSshSvcName }
     }
 }
 Start-SshAgent -Quiet
