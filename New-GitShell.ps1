@@ -28,6 +28,15 @@ if (!(Test-Path $poshGitFolder))
 }
 Import-Module "$poshGitFolder\src\posh-git.psm1"
 
+$ohMyPoshFolder = "$scriptPath\ohMyPosh"
+if (!(Test-Path $ohMyPoshFolder))
+{
+    New-Item -Path $ohMyPoshFolder -ItemType Directory | Out-Null
+    Start-Process -FilePath git -ArgumentList 'clone', 'https://github.com/JanDeDobbeleer/oh-my-posh', "$ohMyPoshFolder" -Wait -NoNewWindow
+}
+Import-Module "$ohMyPoshFolder\oh-my-posh.psm1"
+Set-Theme Paradox
+
 $openSshSvcName = 'ssh-agent'
 $openSsh = Get-Service | ? { $_.Name -eq $openSshSvcName }
 if ($openSsh)
