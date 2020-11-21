@@ -15,8 +15,6 @@ if (!(Test-Path $poshSshellFolder))
 {
     New-Item -Path $poshSshellFolder -ItemType Directory | Out-Null
     Start-Process -FilePath git -ArgumentList 'clone', 'https://github.com/dahlbyk/posh-sshell.git', "$poshSshellFolder" -Wait -NoNewWindow
-    $win32OpenSSHFile = "$poshSshellFolder\src\Win32-OpenSSH.ps1"
-    ((Get-Content -Path $win32OpenSSHFile -Raw) -replace 'ssh.exe \|','ssh.exe -ErrorAction Ignore |') | Set-Content -Path $win32OpenSSHFile
 }
 Import-Module "$poshSshellFolder\posh-sshell.psm1"
 
