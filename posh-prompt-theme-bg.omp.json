@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "blocks":
+  [
+    {
+      "type":"newline"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments":
+      [
+        {
+          "type": "os",
+          "style": "plain",
+          "foreground": "#FFFFFF",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "alpine": "\uF300",
+            "arch": "\uF303",
+            "centos": "\uF304",
+            "debian": "\uF306",
+            "elementary": "\uF309",
+            "fedora": "\uF30A",
+            "gentoo": "\uF30D",
+            "linux": "\uE712",
+            "macos": "\uE711",
+            "manjaro": "\uF312",
+            "mint": "\uF30F",
+            "opensuse": "\uF314",
+            "raspbian": "\uF315",
+            "ubuntu": "\uF31C",
+            "wsl": "WSL",
+            "wsl_separator": " ",
+            "windows": "\uE62A"
+          }
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#FFFFFF",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "postfix": "<#7A7A7A>  \uE0B1</>",
+            "display_user": false,
+            "host_color": "#AFAFAF"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "text": "<#FFFFFF> \uF007</>"
+          }
+        },
+        {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#FFFFFF",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "root_icon": "\uF0E7"
+          }
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#FFFFFF",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "postfix": "<#7A7A7A>  \uE0B1</>",
+            "display_host": false,
+            "user_color": "#AFAFAF"
+          }
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#AFAFAF",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "prefix": "<#FFFFFF>  \uF64F  </>",
+            "postfix": "<#7A7A7A>  \uE0B1</>",
+            "time_format": "2006-01-02 15:04:05"
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#AFAFAF",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "prefix": "<#FFFFFF>  \uE5FE  </>",
+            "style": "full",
+            "enable_hyperlink": false
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#FFFFFF",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "display_stash_count": true,
+            "display_upstream_icon": true,
+            "display_status": true,
+            "status_colors_enabled": true,
+            "color_background": false,
+            "local_changes_color": "#FFEB3B",
+            "working_color": "#FF5555",
+            "staging_color": "#2FDA5F",
+            "behind_color": "#CF3456",
+            "ahead_color": "#2FD4FF"
+          }
+        },
+        {
+          "type": "text",
+          "style": "diamond",
+          "trailing_diamond": "\ue0b0",
+          "background": "#2F2F2F",
+          "properties":
+          {
+            "text": "",
+            "postfix": "",
+            "prefix": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "newline"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments":
+      [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#FFFFFF",
+          "properties":
+          {
+            "prefix": " ",
+            "postfix": " ",
+            "text": "$"
+          }
+        }
+      ]
+    }
+  ]
+}
